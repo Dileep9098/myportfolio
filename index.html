@@ -1,0 +1,2317 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="siteTitle">Dileep Sahu | Full-Stack / MERN Stack Developer Portfolio</title>
+  <meta name="description"
+    content="Portfolio of Dileep Sahu — Full-Stack / MERN Stack Developer at Mobiteq Payments Pvt. Ltd. Specializing in React.js, Node.js, Razorpay/Stripe, Socket.io, Agora, and scalable web architectures.">
+
+  <!-- Google Fonts: JetBrains Mono, Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+    integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Custom Luxury Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="100" tabindex="0">
+
+  <!-- Interactive Ambient Canvas Background -->
+  <canvas id="ambientCanvas" class="ambient-canvas" aria-hidden="true"></canvas>
+
+  <!-- Custom Cursor for Desktop -->
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- Top Verified Developer Banner -->
+  <div class="personalizer-banner text-center py-1 small" id="personalizerBanner">
+    <span><i class="fa-solid fa-id-card " style="color: #10b981; font-size: 1.00rem;"></i> <strong>Dileep Sahu</strong>
+      • Full-Stack / MERN Stack Developer at <strong> </strong> • Open to New Collaborations</span>
+  </div>
+
+  <!-- =========================================================================
+       1. NAVIGATION HEADER (Sticky Glassmorphic + Mobile Offcanvas)
+       ========================================================================= -->
+  <header class="portfolio-header sticky-top" id="header">
+    <nav class="navbar navbar-expand-lg" id="mainNav">
+      <div class="container">
+        <!-- Brand Logo -->
+        <a class="navbar-brand brand-logo d-flex align-items-center gap-2" href="#hero">
+          <div class="logo-box">
+            <!-- <span class="logo-symbol">&lt;/&gt;</span> -->
+            <img src="DileepLogo1.png" alt="Dileep Sahu Logo" class="logo-image" width="60" height="60">
+          </div>
+          <span class="logo-text"><span id="navLogoName">DILEEP</span>
+            <span class="accent-dot"> </span>SAHU</span>
+          <span class="brand-sub-badge d-none d-md-inline-block">MERN</span>
+        </a>
+
+        <!-- Mobile Action Buttons & Hamburger -->
+        <div class="d-flex align-items-center gap-2 d-lg-none">
+          <!-- Mobile Sound FX Toggle -->
+          <!-- <button class="sound-toggle-btn btn btn-sm sound-btn" aria-label="Toggle Sound Effects" title="Sound Effects">
+            <span class="sound-icon-on">🔊</span>
+            <span class="sound-icon-off d-none">🔇</span>
+          </button> -->
+
+          <!-- Mobile Theme Toggle -->
+          <button class="theme-toggle-btn btn btn-sm" aria-label="Toggle Color Theme" title="Toggle theme">
+            <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2"
+              fill="none">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2"
+              fill="none">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+
+          <!-- Hamburger Menu Trigger -->
+          <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#mobileMenuOffcanvas" aria-controls="mobileMenuOffcanvas" aria-label="Toggle navigation">
+            <span class="toggler-bar"></span>
+            <span class="toggler-bar"></span>
+            <span class="toggler-bar"></span>
+          </button>
+        </div>
+
+        <!-- Desktop Navigation Links -->
+        <div class="collapse navbar-collapse justify-content-end d-none d-lg-flex" id="desktopNavContent">
+          <ul class="navbar-nav align-items-center gap-1 gap-xl-3 mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" href="#hero">Overview</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills">Stack</a></li>
+            <li class="nav-item"><a class="nav-link" href="#bento-projects">Projects</a>
+            </li>
+            <!-- <li class="nav-item"><a class="nav-link highlight-nav-link" href="#payment-simulator">Payment Lab ⚡</a>
+            </li>
+            <li class="nav-item"><a class="nav-link highlight-nav-link" href="#system-architecture">Architecture 🏛️</a></li> -->
+            <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+
+          <div class="d-flex align-items-center gap-2 ms-lg-3">
+            <!-- Theme Accent Palette Picker -->
+            <!-- <div class="accent-palette-picker d-flex align-items-center gap-1 p-1 rounded-pill" title="Choose Accent Color">
+              <button class="accent-btn active" data-accent="violet" aria-label="Royal Violet" style="--swatch: #6366f1;"></button>
+              <button class="accent-btn" data-accent="emerald" aria-label="FinTech Emerald" style="--swatch: #10b981;"></button>
+              <button class="accent-btn" data-accent="cyan" aria-label="Cyber Cyan" style="--swatch: #06b6d4;"></button>
+              <button class="accent-btn" data-accent="amber" aria-label="Amber Gold" style="--swatch: #f59e0b;"></button>
+            </div> -->
+
+            <!-- Sound FX Toggle Desktop -->
+            <!-- <button class="sound-toggle-btn btn sound-btn" aria-label="Toggle Sound Effects" title="Sound Effects">
+              <span class="sound-icon-on">🔊</span>
+              <span class="sound-icon-off d-none">🔇</span>
+            </button> -->
+
+            <!-- Theme Switcher Desktop -->
+            <button class="theme-toggle-btn btn" aria-label="Toggle Color Theme" title="Toggle theme">
+              <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2"
+                fill="none">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+              <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2"
+                fill="none">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            </button>
+
+            <!-- Book a Call CTA -->
+            <a href="#contact" class="btn btn-luxury-gradient download-cv-btn">
+              <span>Get in Touch</span>
+              <svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" stroke-width="2.5" fill="none">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Offcanvas Menu (Responsive Drawer) -->
+  <div class="offcanvas offcanvas-end mobile-offcanvas" tabindex="-1" id="mobileMenuOffcanvas"
+    aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header border-bottom border-subtle">
+      <h5 class="offcanvas-title brand-logo" id="mobileMenuLabel">
+        <span class="logo-box"> <img src="DileepLogo1.png" alt="Dileep Sahu Logo" class="logo-image" width="60"
+            height="60"></span>
+        <span><span class="dynamic-dev-name-short">DILEEP</span><span class="accent-dot"> </span>SAHU</span>
+      </h5>
+      <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas"
+        aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column justify-content-between p-4">
+      <ul class="nav flex-column gap-3 mobile-nav-links">
+        <li class="nav-item"><a class="nav-link" href="#hero"><i class="fa-solid fa-circle-arrow-right"></i> Overview &
+            Terminal</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about"><i class="fa-solid fa-circle-arrow-right"></i> About
+            Dileep</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills"><i class="fa-solid fa-circle-arrow-right"></i> MERN &
+            Payment Stack</a></li>
+        <li class="nav-item"><a class="nav-link" href="#bento-projects"><i class="fa-solid fa-circle-arrow-right"></i>
+            Featured Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience"><i class="fa-solid fa-circle-arrow-right"></i>
+            Experience</a></li>
+      </ul>
+
+      <div class="mobile-offcanvas-footer pt-4 border-top border-subtle d-flex flex-column gap-3">
+        <!-- Mobile Accent Selection -->
+        <!-- <div class="d-flex align-items-center justify-content-between">
+          <span class="small text-secondary fw-semibold">Theme Accent:</span>
+          <div class="accent-palette-picker d-flex align-items-center gap-2">
+            <button class="accent-btn active" data-accent="violet" aria-label="Royal Violet" style="--swatch: #6366f1;"></button>
+            <button class="accent-btn" data-accent="emerald" aria-label="FinTech Emerald" style="--swatch: #10b981;"></button>
+            <button class="accent-btn" data-accent="cyan" aria-label="Cyber Cyan" style="--swatch: #06b6d4;"></button>
+            <button class="accent-btn" data-accent="amber" aria-label="Amber Gold" style="--swatch: #f59e0b;"></button>
+          </div>
+        </div> -->
+
+        <button class="btn btn-luxury-gradient w-100 download-resume-action">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+             <a href="my_resume (2).pdf" target="_blank" download=""> Download Resume
+                </a>
+        </button>
+        <div class="d-flex justify-content-center gap-3 social-icons-mini pt-2">
+          <a href="https://github.com/Dileep9098" target="_blank">GitHub</a>
+          <span>•</span>
+          <a href="https://www.linkedin.com/in/dileep-sahu/" target="_blank">LinkedIn</a>
+          <span>•</span>
+          <a href="mailto:dileeprathore9098@gmail.com">Email</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- =========================================================================
+         2. HERO SECTION WITH INTERACTIVE TERMINAL
+         ========================================================================= -->
+    <section class="hero-section position-relative" id="hero">
+      <div class="container position-relative z-2">
+        <div class="row align-items-center gy-5">
+          <!-- Hero Text -->
+          <div class="col-lg-6 text-center text-lg-start">
+            <!-- Availability Badge -->
+            <div class="status-pill d-inline-flex align-items-center gap-2 mb-3">
+              <span class="pulsing-green-dot"></span>
+              <span class="status-text" id="devStatusText">Full-Stack / MERN Developer @ Mobiteq Payments Pvt.
+                Ltd.</span>
+            </div>
+
+            <h1 class="hero-title fw-bold mb-3">
+              Hey, I'm <span class="gradient-text" id="devHeroName">Dileep Sahu</span>.
+            </h1>
+
+            <!-- Dynamic Typewriter Text -->
+            <div class="typewriter-container mb-4">
+              <span class="lead-prefix">Specialized in </span>
+              <span class="typewriter-text" id="typewriterText"></span>
+              <span class="cursor">_</span>
+            </div>
+
+            <p class="hero-bio text-secondary mb-4 mx-auto mx-lg-0" id="devBioText">
+              Full-Stack & MERN Stack Software Engineer at <strong>Mobiteq Payments Pvt. Ltd.</strong> building scalable
+              web applications, seamless payment solutions, and real-time experiences with React, Node.js, MongoDB,
+              MySQL, Socket.io & Agora.
+
+            </p>
+
+            <!-- Hero Action Buttons -->
+            <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start mb-4">
+              <a href="#bento-projects" class="btn btn-luxury-gradient px-4 py-3">
+                <span>Explore Featured Projects</span>
+                <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5" fill="none">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <!-- <button class="btn btn-outline-luxury px-4 py-3 download-resume-action">
+                <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                <span>Curriculum Vitae</span>
+              </button> -->
+            </div>
+
+            <!-- Email One-Click Copy Chip -->
+            <div class="d-inline-flex align-items-center gap-2 email-chip mb-4" id="copyEmailChip"
+              title="Click to copy email address">
+              <span class="email-icon">✉️</span>
+              <span class="email-address" id="devEmailDisplay">dileeprathore9098@gmail.com</span>
+              <span class="copy-badge" id="copyBadge">Copy</span>
+            </div>
+          </div>
+
+          <!-- Hero Right: Interactive Hacker Terminal Console -->
+          <div class="col-lg-6">
+            <!-- <div class="terminal-card spotlight-card shadow-lg mx-auto" id="heroTerminal">
+              <div class="terminal-header d-flex align-items-center justify-content-between">
+                <div class="d-flex gap-2 align-items-center">
+                  <span class="term-dot dot-close"></span>
+                  <span class="term-dot dot-min"></span>
+                  <span class="term-dot dot-expand"></span>
+                </div>
+                <div class="terminal-title" id="terminalTitleBar">dileep@mobiteq-dev: ~ (zsh)</div>
+                <div class="term-badge">bash 5.2</div>
+              </div>
+
+              <div class="terminal-body" id="terminalBody">
+                <div class="term-line text-muted small">Type commands below or click quick pills:</div>
+                <div class="term-line" id="termWelcome"><span class="term-accent">→</span> Welcome to Dileep Sahu's MERN Console [v3.8.0]</div>
+                <div class="term-line">Role: Full-Stack Developer @ Mobiteq Payments Pvt. Ltd.</div>
+                <div class="term-line">Stack: React.js • Node.js • Express • MongoDB • MySQL • Razorpay • Agora</div>
+                <div class="term-line text-info">💡 Try typing <span class="text-warning">skills</span>, <span class="text-warning">projects</span>, <span class="text-warning">cat about.txt</span>, or <span class="text-warning">contact</span></div>
+                <div id="terminalHistory"></div>
+              </div>
+
+              <div class="terminal-quick-chips p-2 d-flex flex-wrap gap-2 border-top border-subtle">
+                <button class="term-chip" data-cmd="skills">skills</button>
+                <button class="term-chip" data-cmd="projects">projects</button>
+                <button class="term-chip" data-cmd="cat about.txt">cat about.txt</button>
+                <button class="term-chip" data-cmd="contact">contact</button>
+                <button class="term-chip" data-cmd="clear">clear</button>
+              </div>
+
+              <form class="terminal-input-row d-flex align-items-center p-2 border-top border-subtle" id="terminalForm">
+                <span class="term-prompt" id="termPromptPrefix">dileep@mobiteq:~$</span>
+                <input type="text" class="terminal-input flex-grow-1 ms-2" id="terminalInput" autocomplete="off" spellcheck="false" placeholder="type a command..." />
+                <button type="submit" class="term-submit-btn" aria-label="Run command">⏎</button>
+              </form>
+            </div> -->
+
+            <img src="dileepImg.png" alt="Dileep Sahu Terminal Console"
+              class="img-fluid rounded-4 shadow-lg mx-auto d-block" />
+
+          </div>
+        </div>
+
+        <!-- Live FinTech Production Metrics Row -->
+        <div class="row g-3 mt-4 pt-3 border-top border-subtle hero-stats-grid">
+
+          <div class="col-6 col-lg-3">
+            <div class="hero-stat-card p-3 rounded-4 spotlight-card">
+              <div class="stat-indicator d-flex align-items-center gap-2 mb-1">
+                <span class="pulse-dot-green"></span>
+                <span class="stat-sub small text-tertiary">EXPERIENCE</span>
+              </div>
+              <div class="stat-value fw-bold fs-3 gradient-text">2+</div>
+              <div class="stat-desc small text-secondary">Years Building Web Apps</div>
+            </div>
+          </div>
+
+          <div class="col-6 col-lg-3">
+            <div class="hero-stat-card p-3 rounded-4 spotlight-card">
+              <div class="stat-indicator d-flex align-items-center gap-2 mb-1">
+                <span class="pulse-dot-blue"></span>
+                <span class="stat-sub small text-tertiary">PROJECTS</span>
+              </div>
+              <div class="stat-value fw-bold fs-3 text-cyan">8+</div>
+              <div class="stat-desc small text-secondary">Web Applications Built</div>
+            </div>
+          </div>
+
+          <div class="col-6 col-lg-3">
+            <div class="hero-stat-card p-3 rounded-4 spotlight-card">
+              <div class="stat-indicator d-flex align-items-center gap-2 mb-1">
+                <span class="pulse-dot-purple"></span>
+                <span class="stat-sub small text-tertiary">TECH STACK</span>
+              </div>
+              <div class="stat-value fw-bold fs-3 text-accent">MERN</div>
+              <div class="stat-desc small text-secondary">React • Node • Express • MongoDB</div>
+            </div>
+          </div>
+
+          <div class="col-6 col-lg-3">
+            <div class="hero-stat-card p-3 rounded-4 spotlight-card">
+              <div class="stat-indicator d-flex align-items-center gap-2 mb-1">
+                <span class="pulse-dot-green"></span>
+                <span class="stat-sub small text-tertiary">AVAILABILITY</span>
+              </div>
+              <div class="stat-value fw-bold fs-3 text-emerald">20-30 Days</div>
+              <div class="stat-desc small text-secondary">Notice Period</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         3. INFINITE TECH STACK MARQUEE TICKER (Dileep's Exact Skills)
+         ========================================================================= -->
+    <section class="marquee-section py-4 border-top border-bottom border-subtle" aria-label="Technologies">
+      <div class="marquee-track">
+        <div class="marquee-content" id="marqueeList1">
+          <span class="tech-pill"><i class="fa-brands fa-react"></i> React.js</span>
+          <span class="tech-pill"><i class="fa-brands fa-js"></i> JavaScript (ES6+)</span>
+          <span class="tech-pill"><i class="fa-brands fa-node"></i> Node.js</span>
+          <span class="tech-pill"><i class="fa-brands fa-square-js"></i> Express.js</span>
+          <span class="tech-pill"><i class="fa-solid fa-database"></i>MongoDB</span>
+          <span class="tech-pill"><i class="fa-solid fa-database"></i> MySQL</span>
+          <span class="tech-pill"><i class="fa-solid fa-credit-card"></i> Razorpay</span>
+          <span class="tech-pill"><i class="fa-solid fa-credit-card"></i> Stripe</span>
+          <span class="tech-pill"><i class="fa-solid fa-video"></i> Agora SDK</span>
+          <span class="tech-pill"><i class="fa-solid fa-plug"></i> Socket.io</span>
+          <span class="tech-pill"><i class="fa-brands fa-react"></i> Redux & Zustand</span>
+          <span class="tech-pill"><i class="fa-brands fa-bootstrap"></i> Bootstrap & MUI</span>
+          <span class="tech-pill"><i class="fa-regular fa-cloud"></i> Cloudinary</span>
+          <span class="tech-pill"><i class="fa-solid fa-fire-flame-curved"></i> Firebase</span>
+          <span class="tech-pill"><i class="fa-solid fa-unlock-keyhole"></i> JWT Auth</span>
+          <span class="tech-pill"><i class="fa-brands fa-square-github"></i> Git & GitHub</span>
+          <span class="tech-pill"><i class="fa-solid fa-paper-plane"></i> Postman</span>
+        </div>
+        <!-- Duplicate for infinite seamless loop -->
+        <div class="marquee-content" id="marqueeList2" aria-hidden="true">
+          <span class="tech-pill"><i class="fa-brands fa-react"></i> React.js</span>
+          <span class="tech-pill"><i class="fa-brands fa-js"></i> JavaScript (ES6+)</span>
+          <span class="tech-pill"><i class="fa-brands fa-node"></i> Node.js</span>
+          <span class="tech-pill"><i class="fa-brands fa-square-js"></i> Express.js</span>
+          <span class="tech-pill"><i class="fa-solid fa-database"></i>MongoDB</span>
+          <span class="tech-pill"><i class="fa-solid fa-database"></i> MySQL</span>
+          <span class="tech-pill"><i class="fa-solid fa-credit-card"></i> Razorpay</span>
+          <span class="tech-pill"><i class="fa-solid fa-credit-card"></i> Stripe</span>
+          <span class="tech-pill"><i class="fa-solid fa-video"></i> Agora SDK</span>
+          <span class="tech-pill"><i class="fa-solid fa-plug"></i> Socket.io</span>
+          <span class="tech-pill"><i class="fa-brands fa-react"></i> Redux & Zustand</span>
+          <span class="tech-pill"><i class="fa-brands fa-bootstrap"></i> Bootstrap & MUI</span>
+          <span class="tech-pill"><i class="fa-regular fa-cloud"></i> Cloudinary</span>
+          <span class="tech-pill"><i class="fa-solid fa-fire-flame-curved"></i> Firebase</span>
+          <span class="tech-pill"><i class="fa-solid fa-unlock-keyhole"></i> JWT Auth</span>
+          <span class="tech-pill"><i class="fa-brands fa-square-github"></i> Git & GitHub</span>
+          <span class="tech-pill"><i class="fa-solid fa-paper-plane"></i> Postman</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. ABOUT DILEEP SAHU
+         ========================================================================= -->
+    <section class="section-padding" id="about">
+      <div class="container">
+
+        <div class="section-heading text-center mb-5">
+          <span class="section-badge">ABOUT ME</span>
+
+          <h2 class="section-title">
+            Building Modern, Scalable & Reliable Web Applications
+          </h2>
+
+          <p class="section-subtitle mx-auto">
+            Full-Stack / MERN Developer focused on building production-ready
+            web applications, payment integrations and real-time features.
+          </p>
+        </div>
+
+        <div class="row align-items-center gy-4">
+
+          <!-- About Visual -->
+          <div class="col-lg-5 text-center">
+            <div class="about-visual-box position-relative mx-auto">
+
+              <div class="about-coder-card p-4 rounded-4 shadow-lg text-start">
+
+                <div class="d-flex align-items-center gap-3 mb-3">
+
+                  <div class="avatar-coder-box">
+                    <span class="avatar-initials">DS</span>
+                  </div>
+
+                  <div>
+                    <h5 class="fw-bold mb-0">Dileep Sahu</h5>
+
+                    <span class="text-cyan small fw-semibold">
+                      Full-Stack / MERN Developer
+                    </span>
+                  </div>
+
+                </div>
+
+                <div class="about-tagline p-3 rounded-3 mb-3">
+
+                  <span class="text-tertiary small d-block">
+                    Currently Working At
+                  </span>
+
+                  <strong class="text-blue fw-semibold">
+                    Mobiteq Payments Pvt. Ltd.
+                  </strong>
+
+                </div>
+
+                <div class="about-bullet-points small text-secondary">
+
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="text-cyan">✓</span>
+                    MERN Stack Web Application Development
+                  </div>
+
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="text-cyan">✓</span>
+                    Payment Gateway & API Integrations
+                  </div>
+
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="text-cyan">✓</span>
+                    Real-Time Chat & Audio/Video Features
+                  </div>
+
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="text-cyan">✓</span>
+                    REST APIs, Databases & Cloud Services
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="exp-floating-badge">
+
+                <span class="exp-number">2+</span>
+
+                <span class="exp-text">
+                  Years of Development Experience
+                </span>
+
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- About Details -->
+          <div class="col-lg-7">
+
+            <h3 class="fw-bold mb-3">
+              I Build Digital Products That Solve Real Business Problems
+            </h3>
+
+            <p class="text-secondary mb-3">
+              Hello! I'm <strong>Dileep Sahu</strong>, a Full-Stack / MERN
+              Developer currently working at
+              <strong>Mobiteq Payments Pvt. Ltd.</strong>
+            </p>
+
+            <p class="text-secondary mb-3">
+              I specialize in developing modern web applications using
+              <strong>React.js, Node.js, Express.js and MongoDB</strong>.
+              My experience includes working on payment systems, business
+              dashboards, e-commerce platforms, real-time communication
+              features and API-driven applications.
+            </p>
+
+            <!-- <p class="text-secondary mb-4">
+              I enjoy turning business requirements into clean, scalable and
+              user-friendly applications — from designing responsive interfaces
+              to developing backend APIs, database architecture and third-party
+              integrations.
+            </p> -->
+
+
+            <!-- Quick Details -->
+            <div class="row g-3 mb-4">
+
+              <!-- Current Role -->
+              <div class="col-sm-6">
+                <div class="info-card-modern">
+
+                  <div class="info-icon">
+                    <i class="fa-solid fa-user-tie"></i>
+                  </div>
+
+                  <div class="info-content">
+                    <span class="info-title">Current Role</span>
+                    <span class="info-data">Full-Stack / MERN Developer</span>
+                  </div>
+
+                  <i class="fa-solid fa-arrow-up-right-from-square info-arrow"></i>
+
+                </div>
+              </div>
+
+
+              <!-- Core Stack -->
+              <div class="col-sm-6">
+                <div class="info-card-modern">
+
+                  <div class="info-icon">
+                    <i class="fa-solid fa-code"></i>
+                  </div>
+
+                  <div class="info-content">
+                    <span class="info-title">Core Stack</span>
+                    <span class="info-data">React • Node • Express • MongoDB</span>
+                  </div>
+
+                  <i class="fa-solid fa-arrow-up-right-from-square info-arrow"></i>
+
+                </div>
+              </div>
+
+
+              <!-- Database -->
+              <div class="col-sm-6">
+                <div class="info-card-modern">
+
+                  <div class="info-icon">
+                    <i class="fa-solid fa-database"></i>
+                  </div>
+
+                  <div class="info-content">
+                    <span class="info-title">Database</span>
+                    <span class="info-data">MongoDB • MySQL</span>
+                  </div>
+
+                  <i class="fa-solid fa-arrow-up-right-from-square info-arrow"></i>
+
+                </div>
+              </div>
+
+
+              <!-- Integrations -->
+              <div class="col-sm-6">
+                <div class="info-card-modern">
+
+                  <div class="info-icon">
+                    <i class="fa-solid fa-plug"></i>
+                  </div>
+
+                  <div class="info-content">
+                    <span class="info-title">Integrations</span>
+                    <span class="info-data">Razorpay • Stripe • Cloudinary • Firebase</span>
+                  </div>
+
+                  <i class="fa-solid fa-arrow-up-right-from-square info-arrow"></i>
+
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Buttons -->
+            <div class="d-flex flex-wrap gap-3">
+
+              <a href="#contact" class="btn btn-luxury-gradient">
+                Let's Work Together
+              </a>
+
+              <button class="btn btn-outline-luxury download-resume-action">
+                <a href="my_resume (2).pdf" target="_blank" download=""> Download Resume
+                </a>
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. ARCHITECTURAL TECH STACK MATRIX (Dileep's Exact Skills)
+         ========================================================================= -->
+    <section class="section-padding bg-surface-subtle" id="skills">
+      <div class="container">
+
+        <div class="section-heading text-center mb-5">
+          <span class="section-badge">TECHNICAL EXPERTISE</span>
+
+          <h2 class="section-title">
+            Technologies I Work With
+          </h2>
+
+          <p class="section-subtitle mx-auto">
+            Technologies and tools I use to build modern, scalable web applications.
+          </p>
+        </div>
+
+
+        <div class="row g-4">
+
+          <!-- Frontend -->
+          <div class="col-md-6 col-lg-3">
+            <div class="stack-card spotlight-card h-100 p-4">
+
+              <div class="stack-header mb-3">
+                <i class="fa-solid fa-code"></i>
+                <h4 class="stack-title">Frontend</h4>
+              </div>
+
+              <p class="small text-secondary mb-3">
+                Building responsive and interactive user interfaces with modern
+                frontend technologies.
+              </p>
+
+              <ul class="stack-chips-list">
+
+                <li>
+                  <span>React.js</span>
+                </li>
+
+                <li>
+                  <span>JavaScript (ES6+)</span>
+                </li>
+
+                <li>
+                  <span>HTML5 & CSS3</span>
+                </li>
+
+                <li>
+                  <span>Bootstrap & MUI</span>
+                </li>
+
+                <li>
+                  <span>Redux Toolkit & Zustand</span>
+                </li>
+
+              </ul>
+
+            </div>
+          </div>
+
+
+          <!-- Backend -->
+          <div class="col-md-6 col-lg-3">
+            <div class="stack-card spotlight-card h-100 p-4">
+
+              <div class="stack-header mb-3">
+                <i class="fa-solid fa-server"></i>
+                <h4 class="stack-title">Backend & APIs</h4>
+              </div>
+
+              <p class="small text-secondary mb-3">
+                Developing REST APIs, authentication systems and real-time
+                application features.
+              </p>
+
+              <ul class="stack-chips-list">
+
+                <li>
+                  <span>Node.js</span>
+                </li>
+
+                <li>
+                  <span>Express.js</span>
+                </li>
+
+                <li>
+                  <span>REST APIs</span>
+                </li>
+
+                <li>
+                  <span>JWT Authentication</span>
+                </li>
+
+                <li>
+                  <span>Socket.io & WebSocket</span>
+                </li>
+
+                <li>
+                  <span>Agora Web SDK</span>
+                </li>
+
+              </ul>
+
+            </div>
+          </div>
+
+
+          <!-- Database -->
+          <div class="col-md-6 col-lg-3">
+            <div class="stack-card spotlight-card h-100 p-4">
+
+              <div class="stack-header mb-3">
+                <i class="fa-solid fa-database"></i>
+                <h4 class="stack-title">Database & Storage</h4>
+              </div>
+
+              <p class="small text-secondary mb-3">
+                Working with relational and NoSQL databases along with
+                cloud-based media storage.
+              </p>
+
+              <ul class="stack-chips-list">
+
+                <li>
+                  <span>MongoDB</span>
+                </li>
+
+                <li>
+                  <span>Mongoose</span>
+                </li>
+
+                <li>
+                  <span>MySQL</span>
+                </li>
+
+                <li>
+                  <span>Cloudinary</span>
+                </li>
+
+                <li>
+                  <span>Firebase</span>
+                </li>
+
+              </ul>
+
+            </div>
+          </div>
+
+
+          <!-- Payments & Tools -->
+          <div class="col-md-6 col-lg-3">
+            <div class="stack-card spotlight-card h-100 p-4">
+
+              <div class="stack-header mb-3">
+                <i class="fa-solid fa-plug"></i>
+                <h4 class="stack-title">Integrations & Tools</h4>
+              </div>
+
+              <p class="small text-secondary mb-3">
+                Integrating third-party services and using development tools
+                for building and testing applications.
+              </p>
+
+              <ul class="stack-chips-list">
+
+                <li>
+                  <span>Razorpay</span>
+                </li>
+                <li>
+                  <span>Pay U</span>
+                </li>
+
+                <li>
+                  <span>Stripe</span>
+                </li>
+
+                <li>
+                  <span>Git & GitHub</span>
+                </li>
+
+                <li>
+                  <span>Postman</span>
+                </li>
+
+                <!-- <li>
+              <span>Vite</span>
+            </li> -->
+
+              </ul>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. EDITORIAL BENTO GRID PROJECT SHOWCASE
+         ========================================================================= -->
+    <section class="section-padding" id="bento-projects">
+      <div class="container">
+
+        <div class="section-heading text-center mb-5">
+          <span class="section-badge">FEATURED PROJECTS</span>
+          <h2 class="section-title">Projects I've Built</h2>
+          <p class="section-subtitle mx-auto">
+            A selection of web applications and platforms I've worked on using modern full-stack technologies.
+          </p>
+        </div>
+
+        <!-- Bento Grid Layout -->
+        <div class="bento-grid">
+
+          <!-- BENTO 1: Dating App -->
+          <div class="bento-item bento-hero-span spotlight-card">
+            <div class="bento-card-inner h-100 d-flex flex-column justify-content-between p-4 p-md-5">
+
+              <div>
+                <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
+                  <span class="badge-bento-flagship">DATING & REAL-TIME COMMUNICATION</span>
+                  <div class="metric-chip">● Live Project</div>
+                </div>
+
+                <h3 class="bento-title mb-2">
+                  LoveAI — Dating & Social Platform
+                </h3>
+
+                <p class="text-secondary bento-desc mb-4">
+                  A full-stack dating platform with real-time communication and audio/video calling.
+                  Built with React.js, Python, with WebSocket and Agora
+                  integration for real-time messaging and calls.
+                </p>
+
+                <div class="browser-mockup mb-4 shadow-lg">
+                  <div class="mockup-bar d-flex align-items-center gap-2 px-3 py-2">
+                    <span class="mockup-dot r"></span>
+                    <span class="mockup-dot y"></span>
+                    <span class="mockup-dot g"></span>
+
+                    <div class="mockup-address mx-auto">
+                      loveai.co.il
+                    </div>
+                  </div>
+
+                  <img src="loveai.png" alt="LoveAI Dating Platform" class="mockup-img" />
+                </div>
+              </div>
+
+              <div
+                class="d-flex align-items-center justify-content-between flex-wrap gap-3 pt-3 border-top border-subtle">
+
+                <div class="tags-row">
+                  <span class="tag">#React</span>
+                  <span class="tag">#Python</span>
+                  <span class="tag">#WebSocket</span>
+                  <span class="tag">#Agora</span>
+                </div>
+
+                <div class="d-flex gap-2">
+                  <button class="btn btn-sm btn-outline-luxury open-modal-btn" data-project-id="proj-1">
+                    Details
+                  </button>
+
+                  <a href="https://loveai.co.il/" target="_blank" rel="noreferrer"
+                    class="btn btn-sm btn-luxury-gradient">
+                    Live Project ↗
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+          <!-- BENTO 2: E-commerce -->
+          <div class="bento-item spotlight-card">
+            <div class="bento-card-inner h-100 d-flex flex-column justify-content-between p-4">
+
+              <div>
+
+                <!-- Category -->
+                <span class="badge-bento-sub mb-3 d-inline-block">
+                  E-COMMERCE
+                </span>
+
+                <!-- Title -->
+                <h4 class="bento-title-sub mb-2">
+                  Parijat Handicraft — E-commerce Platform
+                </h4>
+
+                <!-- Description -->
+                <p class="text-secondary small mb-3">
+                  A full-stack e-commerce platform developed for online product sales,
+                  with product management, shopping cart, order processing, payment
+                  gateway integration and courier/shipping services.
+                </p>
+
+                <!-- Project Highlights -->
+                <div class="code-terminal-preview p-3 mb-3">
+
+                  <div class="text-success small mb-1">
+                    &gt; Product & Category Management
+                  </div>
+
+                  <div class="text-cyan small mb-1">
+                    &gt; Shopping Cart & Order Management
+                  </div>
+
+                  <div class="text-warning small mb-1">
+                    &gt; Payment Gateway Integration
+                  </div>
+
+                  <div class="text-info small mb-1">
+                    &gt; Courier & Shipping Integration
+                  </div>
+
+                  <div class="text-primary small">
+                    &gt; Admin Panel & Customer Interface
+                  </div>
+
+                </div>
+
+                <!-- Tech Stack -->
+                <div class="mb-3">
+                  <div class="small text-secondary mb-2">
+                    <span class="text-primary">Tech Stack</span>
+                  </div>
+
+                  <div class="d-flex flex-wrap gap-2">
+                    <span class="tag">React.js</span>
+                    <span class="tag">Node.js</span>
+                    <span class="tag">Express.js</span>
+                    <span class="tag">MongoDB</span>
+                    <span class="tag">Payment API</span>
+                    <span class="tag">Courier API</span>
+                  </div>
+                </div>
+
+                <!-- Development Focus -->
+                <div class="small text-secondary mb-3">
+                  <strong class="text-primary">Key Focus:</strong>
+                  Building a complete shopping experience from product discovery
+                  to order placement, online payment and delivery integration.
+                </div>
+
+              </div>
+
+              <!-- Bottom -->
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top border-subtle">
+
+                <span class="tag">
+                  #MERN #Ecommerce #Payments
+                </span>
+
+                <button class="btn btn-sm btn-outline-luxury open-modal-btn" data-project-id="proj-2">
+                  Details
+                </button>
+
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- BENTO 3: Restaurant Management -->
+          <div class="bento-item spotlight-card">
+            <div class="bento-card-inner h-100 d-flex flex-column justify-content-between p-4">
+
+              <div>
+                <span class="badge-bento-sub mb-3 d-inline-block">
+                  RESTAURANT MANAGEMENT
+                </span>
+
+                <h4 class="bento-title-sub mb-2">
+                  Restaurant Management & POS System
+                </h4>
+
+                <p class="text-secondary small mb-3">
+                  Restaurant management platform with menu management, POS, orders, KOT,
+                  inventory, tables, QR-based features and billing workflows.
+                </p>
+
+                <div class="stats-preview-strip d-flex flex-wrap gap-2 mb-3">
+                  <div class="stat-pill">POS & Billing</div>
+                  <div class="stat-pill">KOT</div>
+                  <div class="stat-pill">Inventory</div>
+                  <div class="stat-pill">Table & QR</div>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center pt-2 border-top border-subtle">
+                <!-- <span class="tag">#React #Node.js #MongoDB</span> -->
+
+                <div class="d-flex gap-2">
+                  <button class="btn btn-sm btn-outline-luxury open-modal-btn" data-project-id="proj-3">
+                    Details
+                  </button>
+
+                  <a href="https://restaurant-management-f.vercel.app/" target="_blank" rel="noreferrer"
+                    class="btn btn-sm btn-luxury-gradient">
+                    Live ↗
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- BENTO 4: SIM B2B Portal -->
+          <div class="bento-item spotlight-card">
+            <div class="bento-card-inner h-100 d-flex flex-column justify-content-between p-4">
+
+              <div>
+                <span class="badge-bento-sub mb-3 d-inline-block">
+                  B2B PLATFORM
+                </span>
+
+                <h4 class="bento-title-sub mb-2">
+                  SIM M2M B2B Portal
+                </h4>
+
+                <p class="text-secondary small mb-3">
+                  Business portal developed for managing SIM/M2M operations with
+                  role-based access, business workflows and administrative management.
+                </p>
+
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                  <div class="stat-pill">B2B Management</div>
+                  <div class="stat-pill">Admin Panel</div>
+                  <div class="stat-pill">Role Based Access</div>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center pt-2 border-top border-subtle">
+                <span class="tag">#React #Node.js #MongoDB</span>
+
+                <button class="btn btn-sm btn-outline-luxury open-modal-btn" data-project-id="proj-4">
+                  Details
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- BENTO 5: Mobiteq Academy -->
+          <div class="bento-item spotlight-card">
+            <div class="bento-card-inner h-100 d-flex flex-column justify-content-between p-4">
+
+              <div>
+                <span class="badge-bento-sub mb-3 d-inline-block">
+                  LEARNING PLATFORM
+                </span>
+
+                <h4 class="bento-title-sub mb-2">
+                  Mobiteq Academy
+                </h4>
+
+                <p class="text-secondary small mb-3">
+                  Web-based learning platform with structured course content,
+                  user management and administrative features for managing learning resources.
+                </p>
+
+                <div class="code-terminal-preview p-3 mb-3">
+                  <div class="text-success small">
+                    &gt; Course Management
+                  </div>
+                  <div class="text-cyan small">
+                    &gt; User Management
+                  </div>
+                  <div class="text-warning small">
+                    &gt; Learning Content
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center pt-2 border-top border-subtle">
+                <span class="tag">#React #Node.js #MongoDB</span>
+
+                <button class="btn btn-sm btn-outline-luxury open-modal-btn" data-project-id="proj-5">
+                  Details
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- BENTO 6: Client Projects -->
+          <div class="bento-item spotlight-card">
+            <div class="bento-card-inner h-100 d-flex flex-column justify-content-between p-4">
+
+              <div>
+                <span class="badge-bento-sub mb-3 d-inline-block">
+                  CLIENT PROJECTS
+                </span>
+
+                <h4 class="bento-title-sub mb-2">
+                  Client Websites & Custom Web Solutions
+                </h4>
+
+                <p class="text-secondary small mb-3">
+                  Responsive websites and custom web applications developed for different
+                  client requirements, with a focus on clean UI, usability and reliable functionality.
+                </p>
+
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                  <div class="stat-pill">Responsive UI</div>
+                  <div class="stat-pill">Custom Features</div>
+                  <div class="stat-pill">Admin Panels</div>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center pt-2 border-top border-subtle">
+                <span class="tag">#React #JavaScript #Bootstrap</span>
+
+                <button class="btn btn-sm btn-outline-luxury open-modal-btn" data-project-id="proj-6">
+                  Details
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- =========================================================================
+         6B. SOMETHING SPECIAL 1: INTERACTIVE PAYMENT GATEWAY & WEBHOOK SIMULATOR
+         ========================================================================= -->
+    <!-- <section class="section-padding position-relative" id="payment-simulator">
+      <div class="container">
+        <div class="section-heading text-center mb-5">
+          <span class="section-badge">INTERACTIVE FINTECH PLAYGROUND</span>
+          <h2 class="section-title">Live Payment & Webhook Architecture Simulator</h2>
+          <p class="section-subtitle mx-auto">
+            Experience the production FinTech pipeline Dileep engineered at <strong>Mobiteq Payments</strong> — from
+            client checkout initialization to cryptographic HMAC-SHA256 signature verification and dual-database ACID
+            settlement.
+          </p>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-5">
+            <div class="simulator-card spotlight-card h-100 p-4 p-md-5 d-flex flex-column justify-content-between">
+              <div>
+                <div class="d-flex align-items-center justify-content-between mb-4">
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="sim-brand-dot"></span>
+                    <h4 class="fw-bold mb-0">Payment Checkout</h4>
+                  </div>
+                  <span class="badge bg-primary-subtle text-cyan small fw-semibold px-3 py-1 rounded-pill">Sandboxed
+                    v2.4</span>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label small text-tertiary fw-semibold">1. SELECT GATEWAY</label>
+                  <div class="sim-gateway-selector d-flex gap-2">
+                    <button type="button" class="sim-gateway-btn active" data-gateway="razorpay">
+                      <span class="gw-icon">💳</span>
+                      <span>Razorpay (INR)</span>
+                    </button>
+                    <button type="button" class="sim-gateway-btn" data-gateway="stripe">
+                      <span class="gw-icon">🌐</span>
+                      <span>Stripe (USD)</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="row g-2 mb-3">
+                  <div class="col-6">
+                    <label class="form-label small text-tertiary fw-semibold">ORDER AMOUNT</label>
+                    <div class="input-group">
+                      <span class="input-group-text custom-input-addon" id="simCurrencySymbol">₹</span>
+                      <input type="number" class="form-control custom-input" id="simAmountInput" value="2499" min="1" />
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <label class="form-label small text-tertiary fw-semibold">CATEGORY</label>
+                    <select class="form-select custom-input" id="simCategorySelect">
+                      <option value="ecommerce">E-Commerce</option>
+                      <option value="subscription">SaaS Monthly</option>
+                      <option value="qr_settle">QR Merchant</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label small text-tertiary fw-semibold">CUSTOMER DETAILS (MOCK)</label>
+                  <div class="p-2 rounded-3 bg-surface-subtle border border-subtle small">
+                    <div class="d-flex justify-content-between text-secondary mb-1">
+                      <span>Customer:</span> <strong class="text-white">Dileep Sahu (Client)</strong>
+                    </div>
+                    <div class="d-flex justify-content-between text-secondary">
+                      <span>Merchant ID:</span> <span class="font-monospace text-cyan">mobiteq_merch_7781</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-check form-switch mb-4">
+                  <input class="form-check-input" type="checkbox" id="simIdempotencyReplay" />
+                  <label class="form-check-label small text-secondary" for="simIdempotencyReplay">
+                    Simulate Duplicate Webhook Replay <span class="badge bg-warning-subtle text-warning ms-1">Tests
+                      Idempotency Guard</span>
+                  </label>
+                </div>
+              </div>
+
+              <div>
+                <button type="button"
+                  class="btn btn-luxury-gradient w-100 py-3 d-flex align-items-center justify-content-center gap-2"
+                  id="triggerPaymentSimBtn">
+                  <span>🚀 Execute Payment Simulation</span>
+                </button>
+                <div class="d-flex justify-content-between align-items-center mt-3 small text-tertiary">
+                  <span>🔒 HMAC SHA-256 Armed</span>
+                  <span>⚡ MySQL & MongoDB Synced</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="pipeline-card spotlight-card h-100 p-4 p-md-5 d-flex flex-column justify-content-between">
+              <div>
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="live-blink-dot"></span>
+                    <h5 class="fw-bold mb-0">Live Pipeline Execution Flow</h5>
+                  </div>
+                  <span class="badge bg-dark border border-subtle font-monospace text-cyan" id="simStatusPill">AWAITING
+                    TRIGGER</span>
+                </div>
+
+                <div class="sim-pipeline-steps mb-4">
+                  <div class="pipeline-step-item" id="step-1">
+                    <div class="step-circle"><span class="step-num">1</span><span class="step-icon">📦</span></div>
+                    <div class="step-info">
+                      <div class="step-name">Create Order</div>
+                      <div class="step-sub">POST /api/v1/orders</div>
+                    </div>
+                  </div>
+
+                  <div class="pipeline-step-item" id="step-2">
+                    <div class="step-circle"><span class="step-num">2</span><span class="step-icon">🔐</span></div>
+                    <div class="step-info">
+                      <div class="step-name">Authorize</div>
+                      <div class="step-sub">Gateway Modal</div>
+                    </div>
+                  </div>
+
+                  <div class="pipeline-step-item" id="step-3">
+                    <div class="step-circle"><span class="step-num">3</span><span class="step-icon">📡</span></div>
+                    <div class="step-info">
+                      <div class="step-name">Webhook Ingestion</div>
+                      <div class="step-sub">payment.captured</div>
+                    </div>
+                  </div>
+
+                  <div class="pipeline-step-item" id="step-4">
+                    <div class="step-circle"><span class="step-num">4</span><span class="step-icon">🛡️</span></div>
+                    <div class="step-info">
+                      <div class="step-name">HMAC Signature</div>
+                      <div class="step-sub">SHA-256 Digest</div>
+                    </div>
+                  </div>
+
+                  <div class="pipeline-step-item" id="step-5">
+                    <div class="step-circle"><span class="step-num">5</span><span class="step-icon">🐬</span></div>
+                    <div class="step-info">
+                      <div class="step-name">Dual DB Settle</div>
+                      <div class="step-sub">MySQL + MongoDB</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="sim-console-box rounded-3 p-3 mb-3">
+                  <div
+                    class="sim-console-header d-flex align-items-center justify-content-between mb-2 pb-2 border-bottom border-subtle">
+                    <span class="font-monospace small text-cyan">&gt; payment-orchestrator.service.js</span>
+                    <span class="badge bg-secondary-subtle text-secondary small font-monospace"
+                      id="simLatencyBadge">Latency: 0ms</span>
+                  </div>
+                  <div class="sim-console-logs font-monospace small" id="simConsoleLogs">
+                    <div class="text-secondary">&gt; FinTech payment orchestration engine initialized.</div>
+                    <div class="text-secondary">&gt; Standing by for checkout trigger...</div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <button class="btn btn-sm btn-outline-luxury d-flex align-items-center gap-2" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#webhookPayloadCollapse" aria-expanded="false">
+                    <span>Inspect Raw Webhook JSON Payload</span>
+                    <span>▼</span>
+                  </button>
+                  <button class="btn btn-sm btn-subtle-copy" id="copyWebhookJsonBtn" title="Copy JSON payload">📋 Copy
+                    JSON</button>
+                </div>
+                <div class="collapse mt-2" id="webhookPayloadCollapse">
+                  <pre class="sim-json-display p-3 rounded-3 mb-0"
+                    id="simJsonDisplay"><code>// Click "Execute Payment Simulation" to generate live cryptographically signed payload</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- =========================================================================
+         6C. SOMETHING SPECIAL 2: INTERACTIVE PRODUCTION SYSTEM ARCHITECTURE
+         ========================================================================= -->
+
+
+    <!-- <section class="section-padding bg-surface-subtle position-relative" id="system-architecture">
+      <div class="container">
+        <div class="section-heading text-center mb-5">
+          <span class="section-badge">PRODUCTION ARCHITECTURE</span>
+          <h2 class="section-title">Mobiteq Enterprise Architecture Blueprint</h2>
+          <p class="section-subtitle mx-auto">
+            Click on any architectural node to inspect Dileep's design decisions, concurrency safeguards, and live
+            production code patterns.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-7">
+            <div class="arch-diagram-card spotlight-card p-4 p-md-5 rounded-4">
+              <div class="arch-tier-block mb-4">
+                <div class="tier-label small text-tertiary fw-bold mb-2">TIER 1 • PRESENTATION & CLIENT STORE</div>
+                <div class="arch-nodes-grid">
+                  <div class="arch-node active" data-node="react_mui">
+                    <div class="node-icon">⚛️</div>
+                    <div class="node-title">React 18 & MUI</div>
+                    <div class="node-sub">Micro-Frontends</div>
+                  </div>
+                  <div class="arch-node" data-node="zustand_redux">
+                    <div class="node-icon">🔄</div>
+                    <div class="node-title">Zustand & Redux</div>
+                    <div class="node-sub">Ephemeral State</div>
+                  </div>
+                  <div class="arch-node" data-node="bootstrap_responsive">
+                    <div class="node-icon">💎</div>
+                    <div class="node-title">Bootstrap 5</div>
+                    <div class="node-sub">100% Mobile Fluid</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="arch-connector-line text-center my-2">
+                <span class="connector-arrow">↓ HTTPS / WSS Duplex Channels ↓</span>
+              </div>
+
+              <div class="arch-tier-block mb-4">
+                <div class="tier-label small text-tertiary fw-bold mb-2">TIER 2 • API GATEWAY & SECURITY</div>
+                <div class="arch-nodes-grid">
+                  <div class="arch-node" data-node="node_express">
+                    <div class="node-icon">⚡</div>
+                    <div class="node-title">Node & Express</div>
+                    <div class="node-sub">Clustered Gateway</div>
+                  </div>
+                  <div class="arch-node" data-node="jwt_security">
+                    <div class="node-icon">🔒</div>
+                    <div class="node-title">JWT Auth & Rate Limit</div>
+                    <div class="node-sub">Token Rotation & DDoS</div>
+                  </div>
+                  <div class="arch-node" data-node="postman_ci">
+                    <div class="node-icon">🚀</div>
+                    <div class="node-title">Postman Test Suite</div>
+                    <div class="node-sub">Automated CI Gates</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="arch-connector-line text-center my-2">
+                <span class="connector-arrow">↓ Microservice Event Dispatch ↓</span>
+              </div>
+
+              <div class="arch-tier-block mb-4">
+                <div class="tier-label small text-tertiary fw-bold mb-2">TIER 3 • CORE ENGINES & REAL-TIME SERVICES
+                </div>
+                <div class="arch-nodes-grid">
+                  <div class="arch-node" data-node="razorpay_stripe">
+                    <div class="node-icon">💳</div>
+                    <div class="node-title">Razorpay & Stripe</div>
+                    <div class="node-sub">Webhook Reconciliation</div>
+                  </div>
+                  <div class="arch-node" data-node="agora_rtc">
+                    <div class="node-icon">📹</div>
+                    <div class="node-title">Agora Web SDK</div>
+                    <div class="node-sub">&lt;40ms Video/Audio</div>
+                  </div>
+                  <div class="arch-node" data-node="socket_realtime">
+                    <div class="node-icon">🔌</div>
+                    <div class="node-title">Socket.io Events</div>
+                    <div class="node-sub">Bidirectional Push</div>
+                  </div>
+                  <div class="arch-node" data-node="cloudinary_media">
+                    <div class="node-icon">☁️</div>
+                    <div class="node-title">Cloudinary CDN</div>
+                    <div class="node-sub">Dynamic Media CDN</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="arch-connector-line text-center my-2">
+                <span class="connector-arrow">↓ ACID Transaction & Event Stream Persistence ↓</span>
+              </div>
+
+              <div class="arch-tier-block">
+                <div class="tier-label small text-tertiary fw-bold mb-2">TIER 4 • HYBRID DATABASE PERSISTENCE</div>
+                <div class="arch-nodes-grid">
+                  <div class="arch-node" data-node="mysql_acid">
+                    <div class="node-icon">🐬</div>
+                    <div class="node-title">MySQL 8 (SQL)</div>
+                    <div class="node-sub">ACID Financial Ledger</div>
+                  </div>
+                  <div class="arch-node" data-node="mongo_streams">
+                    <div class="node-icon">🍃</div>
+                    <div class="node-title">MongoDB (NoSQL)</div>
+                    <div class="node-sub">Audit & Event Streams</div>
+                  </div>
+                  <div class="arch-node" data-node="firebase_cloud">
+                    <div class="node-icon">🔥</div>
+                    <div class="node-title">Firebase Realtime</div>
+                    <div class="node-sub">Cloud Messaging & Sync</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div
+              class="arch-inspector-card spotlight-card p-4 p-md-5 rounded-4 h-100 d-flex flex-column justify-content-between"
+              id="archInspectorPane">
+              <div>
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <span class="badge bg-primary-subtle text-cyan small px-3 py-1 rounded-pill"
+                    id="archInspectBadge">Client & Presentation</span>
+                  <span class="small text-secondary font-monospace" id="archInspectPerf">Render: &lt;16ms (60fps)</span>
+                </div>
+
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <div class="arch-inspect-icon fs-2" id="archInspectIcon">⚛️</div>
+                  <div>
+                    <h4 class="fw-bold mb-0" id="archInspectTitle">React 18 & Material-UI</h4>
+                    <span class="text-tertiary small" id="archInspectTech">React.js • MUI • Bootstrap 5</span>
+                  </div>
+                </div>
+
+                <p class="text-secondary small mb-4" id="archInspectDesc">
+                  Engineered with React 18 concurrent rendering, virtual DOM batching, and Material-UI design tokens.
+                  Delivers instant merchant dashboards with sub-second page transitions and zero layout shifts across
+                  desktop and mobile devices.
+                </p>
+
+                <h6 class="text-uppercase small fw-bold text-accent mb-2">Production Implementation Pattern:</h6>
+                <div class="arch-code-block p-3 rounded-3 mb-4">
+                  <pre class="mb-0 small"><code id="archInspectCode">// Sample production code pattern</code></pre>
+                </div>
+              </div>
+
+              <div
+                class="arch-inspect-footer pt-3 border-top border-subtle d-flex align-items-center justify-content-between small text-secondary">
+                <span>⚡ Mobiteq Payments Standard</span>
+                <span class="text-cyan">Tested & Verified ✓</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- =========================================================================
+         7. WORK EXPERIENCE (Mobiteq Payments Pvt. Ltd.)
+         ========================================================================= -->
+    <section class="section-padding resume-experience" id="experience">
+      <div class="container">
+
+        <div class="section-heading text-center mb-5">
+          <span class="section-badge">CAREER JOURNEY</span>
+          <h2 class="section-title">Professional Experience</h2>
+          <p class="section-subtitle mx-auto">
+            My professional journey, education and hands-on experience in full-stack web development.
+          </p>
+        </div>
+
+        <div class="resume-grid">
+
+          <!-- ================= LEFT COLUMN ================= -->
+          <div class="resume-left">
+
+            <!-- SUMMARY -->
+            <div class="resume-section">
+              <h2 class="resume-heading">Summary</h2>
+
+              <div class="resume-timeline">
+
+                <div class="resume-timeline-item">
+                  <div class="resume-timeline-dot"></div>
+
+                  <div class="resume-content">
+                    <p class="resume-summary">
+                      Experienced Full Stack Developer with approximately
+                      <strong>2 years and 7 months</strong> of hands-on experience
+                      in building modern web applications.
+                      Skilled in developing responsive admin panels,
+                      user-facing applications and REST APIs using
+                      <strong>React.js, Node.js, Express.js and MongoDB.</strong>
+                      Experienced in integrating third-party services,
+                      implementing application features and debugging
+                      technical issues to deliver reliable user experiences.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+
+            <!-- EDUCATION -->
+            <div class="resume-section">
+
+              <h2 class="resume-heading">Education</h2>
+
+              <div class="resume-timeline">
+
+                <!-- BTECH -->
+                <div class="resume-timeline-item">
+
+                  <div class="resume-timeline-dot"></div>
+
+                  <div class="resume-content">
+
+                    <h3 class="resume-role">
+                      BACHELOR OF TECHNOLOGY (B.TECH)
+                    </h3>
+
+                    <div class="resume-date">
+                      2020 - 2024
+                    </div>
+
+                    <h4 class="resume-institute">
+                      Gyan Sagar College of Engineering
+                      Sagar (Madhya Pradesh)
+                    </h4>
+
+                    <p class="resume-description">
+                      Computer Science & Engineering
+                      <strong>with 8.42 CGPA</strong>
+                    </p>
+
+                  </div>
+
+                </div>
+
+
+                <!-- HIGHER SECONDARY -->
+                <div class="resume-timeline-item">
+
+                  <div class="resume-timeline-dot"></div>
+
+                  <div class="resume-content">
+
+                    <h3 class="resume-role">
+                      HIGH & HIGHER SECONDARY EDUCATION
+                    </h3>
+
+                    <div class="resume-date">
+                      2018 - 2020
+                    </div>
+
+                    <h4 class="resume-institute">
+                      Govt Excellence School Hatta,
+                      Damoh (Madhya Pradesh)
+                    </h4>
+
+                    <p class="resume-description">
+                      Completed High & Higher Secondary Education
+                      with <strong>88.0% & 80.4%</strong>
+                    </p>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+
+          <!-- ================= RIGHT COLUMN ================= -->
+          <div class="resume-right">
+
+            <div class="resume-section">
+
+              <h2 class="resume-heading">
+                Professional Experience
+              </h2>
+
+              <div class="resume-timeline">
+
+
+                <!-- ================= MOBITEQ ================= -->
+                <div class="resume-timeline-item">
+
+                  <div class="resume-timeline-dot"></div>
+
+                  <div class="resume-content">
+
+                    <h3 class="resume-role">
+                      FULL STACK DEVELOPER
+                    </h3>
+
+                    <div class="resume-date">
+                      Feb 2024 - Present
+                    </div>
+
+                    <h4 class="resume-company">
+                      <i class="bi bi-building"></i>
+                      Mobiteq Payments Private Limited
+                    </h4>
+
+                    <div class="resume-location">
+                      <i class="bi bi-geo-alt-fill"></i>
+                      Noida, Uttar Pradesh
+                    </div>
+
+
+                    <ul class="resume-points">
+
+                      <li>
+                        Proficient in <strong>React.js</strong> for building
+                        dynamic and responsive web applications.
+                      </li>
+
+                      <li>
+                        Developed and maintained web applications using
+                        <strong>React.js, Node.js, Express.js and MongoDB.</strong>
+                      </li>
+
+                      <li>
+                        Integrated third-party services and APIs to extend
+                        application functionality and improve user workflows.
+                      </li>
+
+                      <li>
+                        Collaborated with cross-functional teams to understand
+                        project requirements, implement features and meet
+                        development deadlines.
+                      </li>
+
+                      <li>
+                        Conducted testing, debugging and issue resolution
+                        to improve application reliability and user experience.
+                      </li>
+
+                      <li>
+                        Worked on a financial services project involving
+                        payment-related workflows and business operations.
+                      </li>
+
+                      <li>
+                        Worked with technologies including
+                        <strong>Razorpay, Stripe, WebSocket, Agora,
+                          Cloudinary and Firebase</strong> based on project requirements.
+                      </li>
+
+                      <li>
+                        Developed responsive admin dashboards and interfaces
+                        using <strong>Bootstrap, MUI and modern React.js practices.</strong>
+                      </li>
+
+                    </ul>
+
+                  </div>
+
+                </div>
+
+
+                <!-- ================= QUALITY WEBS ================= -->
+                <div class="resume-timeline-item">
+
+                  <div class="resume-timeline-dot"></div>
+
+                  <div class="resume-content">
+
+                    <h3 class="resume-role">
+                      WEB DEVELOPER INTERN
+                    </h3>
+
+                    <div class="resume-date">
+                      Oct 2023 - Jan 2024
+                    </div>
+
+                    <h4 class="resume-company">
+                      <i class="bi bi-building"></i>
+                      Quality Webs LLC
+                    </h4>
+
+                    <div class="resume-location">
+                      <i class="bi bi-geo-alt-fill"></i>
+                      Indore, Madhya Pradesh
+                    </div>
+
+                    <ul class="resume-points">
+
+                      <li>
+                        Completed a web development internship at
+                        <strong>Quality Webs LLC</strong> in Indore.
+                      </li>
+
+                      <li>
+                        Gained hands-on experience with
+                        <strong>React.js, HTML, CSS, JavaScript and Bootstrap.</strong>
+                      </li>
+
+                      <li>
+                        Worked on developing responsive web applications
+                        and improving user interfaces.
+                      </li>
+
+                      <li>
+                        Assisted in implementing frontend features based on
+                        project requirements and design specifications.
+                      </li>
+
+                    </ul>
+
+                  </div>
+
+                </div>
+
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         8. SCHEDULE A 15-MIN CALL & DIRECT CONTACT
+         ========================================================================= -->
+
+    <section class="section-padding" id="contact">
+      <div class="container">
+
+        <!-- Section Heading -->
+        <div class="section-heading text-center mb-5">
+          <span class="section-badge">GET IN TOUCH</span>
+
+          <h2 class="section-title">
+            Let's Discuss Your Next Project
+          </h2>
+
+          <p class="section-subtitle mx-auto">
+            Have a project, job opportunity, or collaboration in mind?
+            Feel free to reach out and let's start a conversation.
+          </p>
+        </div>
+
+
+        <div class="row g-4 align-items-stretch">
+
+          <!-- =====================================================
+           LEFT SIDE : CONTACT INFORMATION
+           ===================================================== -->
+          <div class="col-lg-5">
+
+            <div class="contact-info-card spotlight-card h-100 p-4 p-md-5">
+
+              <div class="mb-4">
+                <span class="contact-small-label">
+                  CONTACT INFORMATION
+                </span>
+
+                <h3 class="contact-info-title mt-2">
+                  Let's Connect
+                </h3>
+
+                <p class="text-secondary small mb-0">
+                  Whether you're looking for a developer, have a project
+                  requirement, or simply want to discuss an idea,
+                  I'm always open to meaningful conversations.
+                </p>
+              </div>
+
+
+              <!-- Current Address -->
+              <div class="contact-info-item">
+
+                <div class="contact-icon">
+                 <i class="fa-solid fa-location-dot"></i>
+                </div>
+
+                <div>
+                  <span class="contact-item-label">
+                    Current Address
+                  </span>
+
+                  <p class="contact-item-value">
+                    Noida, Uttar Pradesh, India
+                  </p>
+                </div>
+
+              </div>
+
+
+              <!-- Permanent Address -->
+              <div class="contact-info-item">
+
+                <div class="contact-icon">
+                  <i class="fa-regular fa-map"></i>
+                </div>
+
+                <div>
+                  <span class="contact-item-label">
+                    Permanent Address
+                  </span>
+
+                  <p class="contact-item-value">
+                    Hatta, Damoh, Madhya Pradesh, India
+                  </p>
+                </div>
+
+              </div>
+
+
+              <!-- Phone -->
+              <div class="contact-info-item">
+
+                <div class="contact-icon">
+                  <i class="fa-solid fa-phone-volume"></i>
+                </div>
+
+                <div>
+                  <span class="contact-item-label">
+                    Contact Number
+                  </span>
+
+                  <p class="contact-item-value">
+                    <a href="tel:+919098590873">
+                      +91 9098590873
+                    </a>
+                  </p>
+                </div>
+
+              </div>
+
+
+              <!-- Email -->
+              <div class="contact-info-item">
+
+                <div class="contact-icon">
+<i class="fa-solid fa-envelope"></i>                </div>
+
+                <div>
+                  <span class="contact-item-label">
+                    Email Address
+                  </span>
+
+                  <p class="contact-item-value">
+                    <a href="mailto:dileeprathore9098@gmail.com">
+                      dileeprathore9098@gmail.com
+                    </a>
+                  </p>
+                </div>
+
+              </div>
+
+
+              <!-- Availability -->
+              <div class="contact-availability mt-4">
+
+                <span class="availability-dot"></span>
+
+                <div>
+                  <strong>Available for opportunities</strong>
+
+                  <p class="text-secondary small mb-0 mt-1">
+                    Open to Full-Stack, MERN and freelance projects.
+                  </p>
+                </div>
+
+              </div>
+
+
+              <!-- Map -->
+              <div class="contact-map mt-4">
+
+                <div class="map-header">
+                  <span>
+                    <i class="bi bi-map"></i>
+                    Current Location
+                  </span>
+
+                  <span class="map-location-text">
+                    Noida, India
+                  </span>
+                </div>
+
+                <div class="map-frame">
+
+                  <iframe src="https://www.google.com/maps?q=Noida,Uttar Pradesh,India&output=embed" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" allowfullscreen>
+                  </iframe>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- =====================================================
+           RIGHT SIDE : CONTACT FORM
+           ===================================================== -->
+          <div class="col-lg-7">
+
+            <div class="contact-form-card spotlight-card h-100 p-4 p-md-5">
+
+              <!-- Form Header -->
+              <div class="mb-4">
+
+                <span class="contact-small-label">
+                  SEND A MESSAGE
+                </span>
+
+                <h3 class="contact-form-title mt-2">
+                  Tell Me About Your Project
+                </h3>
+
+                <p class="text-secondary small mb-0">
+                  Share a few details about your requirement, opportunity,
+                  or project. I'll get back to you as soon as possible.
+                </p>
+
+              </div>
+
+
+              <form id="portfolioContactForm" novalidate>
+
+                <div class="row g-4">
+
+                  <!-- Name -->
+                  <div class="col-md-6">
+
+                    <label for="contactName" class="form-label small fw-semibold">
+                      Your Name *
+                    </label>
+
+                    <input type="text" class="form-control custom-input" id="contactName" placeholder="e.g. Rahul Verma"
+                      required />
+
+                    <div class="invalid-feedback">
+                      Please enter your name.
+                    </div>
+
+                  </div>
+
+
+                  <!-- Email -->
+                  <div class="col-md-6">
+
+                    <label for="contactEmail" class="form-label small fw-semibold">
+                      Email Address *
+                    </label>
+
+                    <input type="email" class="form-control custom-input" id="contactEmail"
+                      placeholder="Enter Email" required />
+
+                    <div class="invalid-feedback">
+                      Please provide a valid email.
+                    </div>
+
+                  </div>
+
+
+                  <!-- Phone -->
+                  <div class="col-md-6">
+
+                    <label for="contactPhone" class="form-label small fw-semibold">
+                      Contact Number
+                    </label>
+
+                    <input type="tel" class="form-control custom-input" id="contactPhone"
+                      placeholder="+91 XXXXX XXXXX" />
+
+                  </div>
+
+
+                  <!-- Subject -->
+                  <div class="col-md-6">
+
+                    <label for="contactSubject" class="form-label small fw-semibold">
+                      Subject *
+                    </label>
+
+                    <input type="text" class="form-control custom-input" id="contactSubject"
+                      placeholder="Job Opportunity / Project Inquiry" required />
+
+                    <div class="invalid-feedback">
+                      Please enter a subject.
+                    </div>
+
+                  </div>
+
+
+                  <!-- Project Type -->
+                  <div class="col-12">
+
+                    <label for="projectType" class="form-label small fw-semibold">
+                      What can I help you with?
+                    </label>
+
+                    <select class="form-select custom-input" id="projectType">
+
+                      <option value="">
+                        Select an option
+                      </option>
+
+                      <option value="job">
+                        Full-Time Job Opportunity
+                      </option>
+
+                      <option value="freelance">
+                        Freelance Project
+                      </option>
+
+                      <option value="web">
+                        Web Application Development
+                      </option>
+
+                      <option value="collaboration">
+                        Collaboration
+                      </option>
+
+                      <option value="other">
+                        Other Inquiry
+                      </option>
+
+                    </select>
+
+                  </div>
+
+
+                  <!-- Message -->
+                  <div class="col-12">
+
+                    <label for="contactMessage" class="form-label small fw-semibold">
+                      Your Message *
+                    </label>
+
+                    <textarea class="form-control custom-input" id="contactMessage" rows="6"
+                      placeholder="Tell me about your requirements, project scope, timeline, or opportunity..."
+                      required></textarea>
+
+                    <div class="invalid-feedback">
+                      Please write your message.
+                    </div>
+
+                  </div>
+
+
+                  <!-- Submit -->
+                  <div class="col-12">
+
+                    <button type="submit"
+                      class="btn btn-luxury-gradient w-100 py-3 d-flex align-items-center justify-content-center gap-2"
+                      id="submitBtn">
+
+                      <span>
+                        Send Message
+                      </span>
+
+                      <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5"
+                        fill="none">
+
+                        <line x1="22" y1="2" x2="11" y2="13">
+                        </line>
+
+                        <polygon points="22 2 15 22 11 13 2 9 22 2">
+                        </polygon>
+
+                      </svg>
+
+                    </button>
+
+                  </div>
+
+                </div>
+
+              </form>
+
+
+              <!-- Bottom Note -->
+              <div class="contact-form-footer mt-4 pt-3">
+
+                <div class="d-flex align-items-center gap-2">
+                  <i class="bi bi-shield-check"></i>
+
+                  <span>
+                    Your information is used only to respond to your inquiry.
+                  </span>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       9. MOBILE FLOATING ACTION DOCK
+       ========================================================================= -->
+  <aside class="mobile-floating-dock d-lg-none" aria-label="Mobile Navigation Dock">
+    <a href="#hero" class="dock-btn" title="Overview">
+      <span>⚡</span>
+    </a>
+    <a href="#bento-projects" class="dock-btn" title="Projects">
+      <span>🚀</span>
+    </a>
+    <a href="#skills" class="dock-btn" title="Stack">
+      <span>🛠️</span>
+    </a>
+    <a href="#contact" class="dock-btn" title="Contact">
+      <span>📅</span>
+    </a>
+    <button class="dock-btn download-resume-action" title="Resume">
+      <span>📄</span>
+    </button>
+  </aside>
+
+  <!-- =========================================================================
+       10. FOOTER
+       ========================================================================= -->
+  <footer class="portfolio-footer py-5 border-top border-subtle">
+  <div
+    class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3"
+  >
+    <!-- Logo -->
+    <div class="brand-logo small">
+      <span class="logo-box">            <img src="DileepLogo1.png" alt="Dileep Sahu Logo" class="logo-image" width="60" height="60">
+</span>
+      <span>
+        <span class="dynamic-dev-name-short">DILEEP</span><span class="accent-dot"> </span>SAHU
+      </span>
+    </div>
+
+    <!-- Copyright -->
+    <p class="mb-0 text-tertiary small text-center">
+      Crafted with precision & modern web standards
+      © 2026 <span id="footerDevName">Dileep Sahu</span>.
+    </p>
+
+    <!-- Social Links -->
+    <div class="d-flex align-items-center gap-3">
+      <a
+        href="https://github.com/Dileep9098"
+        target="_blank"
+        
+        class="social-link-footer dynamic-github-link"
+        aria-label="GitHub"
+      >
+        GitHub
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/dileep-sahu/"
+        target="_blank"
+        
+        class="social-link-footer dynamic-linkedin-link"
+        aria-label="LinkedIn"
+      >
+        LinkedIn
+      </a>
+
+      <a
+        href="mailto:dileeprathore9098@gmail.com"
+        class="social-link-footer"
+        aria-label="Email"
+      >
+        Email
+      </a>
+
+      <a
+        href="#hero"
+        class="back-to-top-btn"
+        title="Back to Top"
+        aria-label="Back to top"
+      >
+        ↑
+      </a>
+    </div>
+  </div>
+</footer>
+  <!-- =========================================================================
+       11. BOOTSTRAP MODAL: PROJECT QUICK VIEW
+       ========================================================================= -->
+  <div class="modal fade custom-modal" id="projectDetailModal" tabindex="-1" aria-labelledby="modalProjectTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header border-0 pb-0">
+          <span class="badge badge-modal" id="modalProjectCat">Full Stack</span>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body pt-2 pb-4">
+          <div class="row gy-4">
+            <div class="col-md-6">
+              <img src="" alt="" class="img-fluid rounded-3 shadow modal-project-img" id="modalProjectImg" />
+            </div>
+            <div class="col-md-6 d-flex flex-column">
+              <h3 class="fw-bold mb-2" id="modalProjectTitle">Project Title</h3>
+              <p class="text-secondary small mb-3" id="modalProjectDesc">Project description goes here...</p>
+
+              <h6 class="fw-semibold text-uppercase small text-accent mb-2">Key Technical Highlights:</h6>
+              <ul class="highlights-list small text-secondary mb-4 ps-3" id="modalProjectHighlights">
+                <!-- Populated dynamically -->
+              </ul>
+
+              <h6 class="fw-semibold text-uppercase small text-accent mb-2">Tech Stack:</h6>
+              <div class="tags-row mb-4" id="modalProjectTags">
+                <!-- Tags populated dynamically -->
+              </div>
+
+              <div class="d-flex gap-2 mt-auto">
+                <a href="#" target="_blank" class="btn btn-sm btn-luxury-gradient flex-grow-1" id="modalLiveBtn">Launch
+                  Live Demo ↗</a>
+                <a href="https://github.com" target="_blank" class="btn btn-sm btn-outline-luxury"
+                  id="modalGithubBtn">Source Code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toastContainer" style="z-index: 1080;"></div>
+
+  <!-- Bootstrap 5.3 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/js/all.js"
+    integrity="sha512-YbiNgTNv2GVfwJwqGr9Xv9xWzPIEwaDOv3f2S6HFbRVeo/xuM87nKqkmBPctPP3sbvxv3EpNIRss+3gjEJbVrA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- Custom Luxury Script -->
+  <script src="app.js"></script>
+</body>
+
+</html>
