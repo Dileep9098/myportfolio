@@ -2269,5 +2269,98 @@ a {
   #contact .map-frame {
     height: 160px;
   }
+  .hero-section {
+  padding: 3.5rem 0 5rem;
+}
 
+
+}
+
+.portfolio-footer {
+  position: relative;
+}
+
+.footer-brand .brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-brand .logo-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-brand .logo-image {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+}
+
+.brand-name {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.accent-dot {
+  margin-left: 2px;
+}
+
+.footer-heart {
+  font-size: 14px;
+}
+
+.extra-small {
+  font-size: 12px;
+}
+
+.footer-actions {
+  flex-wrap: wrap;
+}
+
+.social-link-footer {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.social-link-footer:hover {
+  transform: translateY(-2px);
+}
+
+.back-to-top-btn {
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.back-to-top-btn:hover {
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  opacity: 0.9;
+}
+
+.availability-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-left: 5px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
 }

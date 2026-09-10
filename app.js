@@ -59,6 +59,32 @@ const PROJECTS_DATA = {
   },
 
   'proj-3': {
+    title: 'Hindustan Pest Control Company — Business Website',
+    category: 'Pest Control & Business Website',
+    img: 'hpcc.png',
+    desc: 'A modern and responsive business website developed for Hindustan Pest Control Company (HPCC) to showcase professional pest control services, build customer trust, and provide an easy way for customers to connect and enquire about services.',
+    highlights: [
+      'Professional website for Hindustan Pest Control Company (HPCC)',
+      'Residential and commercial pest control service presentation',
+      'Dedicated service-focused sections for different pest control solutions',
+      'Responsive and mobile-friendly design',
+      'Customer enquiry and contact-focused user experience',
+      'Company information, trust-building and service sections',
+    ],
+    tags: [
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'Bootstrap',
+      'PHP',
+      'Responsive Design',
+      'Business Website'
+    ],
+    liveUrl: 'https://hpcc.in/',
+    githubUrl: '#'
+  },
+
+  'proj-4': {
     title: 'Restaurant Management & POS System',
     category: 'Restaurant Management',
     img: 'YOUR_RESTAURANT_SCREENSHOT',
@@ -84,7 +110,7 @@ const PROJECTS_DATA = {
     githubUrl: '#'
   },
 
-  'proj-4': {
+  'proj-5': {
     title: 'SIM M2M B2B Portal',
     category: 'B2B Business Platform',
     img: 'YOUR_SIM_B2B_SCREENSHOT',
@@ -110,7 +136,7 @@ const PROJECTS_DATA = {
     githubUrl: '#'
   },
 
-  'proj-5': {
+  'proj-6': {
     title: 'Mobiteq Academy',
     category: 'Learning Platform',
     img: 'YOUR_ACADEMY_SCREENSHOT',
@@ -134,7 +160,7 @@ const PROJECTS_DATA = {
     githubUrl: '#'
   },
 
-  'proj-6': {
+  'proj-7': {
     title: 'Client Websites & Custom Web Solutions',
     category: 'Client Projects',
     img: 'YOUR_CLIENT_PROJECT_SCREENSHOT',
@@ -358,14 +384,14 @@ function initTerminal() {
         document.getElementById('payment-simulator')?.scrollIntoView({ behavior: 'smooth' });
         document.getElementById('triggerPaymentSimBtn')?.click();
       }, 300);
-      return `<div class="text-success">🚀 Navigating to Payment Simulator & triggering live webhook pipeline...</div>`;
+      return `<div class="text-success"><i class="fa-solid fa-rocket"></i> Navigating to Payment Simulator & triggering live webhook pipeline...</div>`;
     },
     pay: () => {
       setTimeout(() => {
         document.getElementById('payment-simulator')?.scrollIntoView({ behavior: 'smooth' });
         document.getElementById('triggerPaymentSimBtn')?.click();
       }, 300);
-      return `<div class="text-success">🚀 Navigating to Payment Simulator & triggering live webhook pipeline...</div>`;
+      return `<div class="text-success"><i class="fa-solid fa-rocket"></i> Navigating to Payment Simulator & triggering live webhook pipeline...</div>`;
     },
     architecture: () => {
       setTimeout(() => {
@@ -477,7 +503,7 @@ function initMeetingScheduler() {
         copyBadge.textContent = 'Copied! ✓';
         copyBadge.style.background = 'var(--color-primary)';
         copyBadge.style.color = '#fff';
-        showToast('Dileep\'s email copied to clipboard!', '📋');
+        showToast('Dileep\'s email copied to clipboard!', '<i class="fa-solid fa-copy"></i>');
         setTimeout(() => {
           copyBadge.textContent = 'Copy';
           copyBadge.style.background = '';
@@ -594,7 +620,7 @@ function initTheme() {
       const nextTheme = current === 'dark' ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', nextTheme);
       localStorage.setItem('portfolio_theme', nextTheme);
-      showToast(`Switched to ${nextTheme === 'dark' ? 'Obsidian Dark' : 'Pearl Light'} Mode`, nextTheme === 'dark' ? '🌙' : '☀️');
+      showToast(`Switched to ${nextTheme === 'dark' ? 'Obsidian Dark' : 'Pearl Light'} Mode`, nextTheme === 'dark' ? '<i class="fa-solid fa-moon"></i>' : '<i class="fa-solid fa-sun"></i>');
     });
   });
 }
@@ -650,7 +676,7 @@ function initContactForm() {
       form.reset();
       form.classList.remove('was-validated');
 
-      showToast(`Thank you, ${name}! Your message was delivered to Dileep Sahu.`, '🚀');
+      showToast(`Thank you, ${name}! Your message was delivered to Dileep Sahu.`, '<i class="fa-solid fa-rocket"></i>');
     }, 1200);
   });
 }
@@ -660,7 +686,7 @@ function initContactForm() {
 //   document.querySelectorAll('.download-resume-action').forEach(btn => {
 //     btn.addEventListener('click', (e) => {
 //       e.preventDefault();
-      
+
 //       showToast("Downloading Dileep Sahu's Verified CV (PDF)...", '📄');
 //     });
 //   });
@@ -982,8 +1008,8 @@ function initPaymentSimulator() {
       const step1 = document.getElementById('step-1');
       step1?.classList.add('active');
       playTone('step');
-      const orderId = activeGateway === 'razorpay' 
-        ? `order_${Math.random().toString(36).substring(2, 11)}` 
+      const orderId = activeGateway === 'razorpay'
+        ? `order_${Math.random().toString(36).substring(2, 11)}`
         : `pi_${Math.random().toString(36).substring(2, 14)}`;
       appendLog(`Order created: ${orderId} | Amount: ${currSym}${amount} (${currCode})`, 'text-success');
 
@@ -1045,7 +1071,7 @@ function initPaymentSimulator() {
                 }
 
                 triggerBtn.disabled = false;
-                triggerBtn.innerHTML = `<span>🚀 Execute Payment Simulation</span>`;
+                triggerBtn.innerHTML = `<span><i class="fa-solid fa-rocket"></i> Execute Payment Simulation</span>`;
                 isSimulating = false;
 
                 // Build Mock JSON Payload
@@ -1078,9 +1104,9 @@ function initPaymentSimulator() {
                 }
 
                 showToast(
-                  isReplay 
-                    ? `Duplicate Webhook caught! Idempotency guard protected ledger.` 
-                    : `Payment of ${currSym}${amount} settled in ${latencyMs}ms!`, 
+                  isReplay
+                    ? `Duplicate Webhook caught! Idempotency guard protected ledger.`
+                    : `Payment of ${currSym}${amount} settled in ${latencyMs}ms!`,
                   isReplay ? '🛡️' : '💳'
                 );
               }, 400);
@@ -1468,4 +1494,108 @@ document.addEventListener('DOMContentLoaded', () => {
       playTone('click');
     });
   });
+});
+
+
+function calculateExperience() {
+  const joiningDate = new Date(2024, 1, 20); // 20 Feb 2024
+  const today = new Date();
+
+  let years = today.getFullYear() - joiningDate.getFullYear();
+  let months = today.getMonth() - joiningDate.getMonth();
+
+  // Agar current date joining date se pehle hai
+  if (today.getDate() < joiningDate.getDate()) {
+    months--;
+  }
+
+  if (months < 0) {
+    years--;
+    months += 12;
+  }
+
+  let experienceText = "";
+
+  if (years > 0) {
+    experienceText += `${years} year${years > 1 ? "s" : ""}`;
+  }
+
+  if (months > 0) {
+    experienceText += ` ${months} month${months > 1 ? "s" : ""}`;
+  }
+
+  if (!experienceText) {
+    experienceText = "less than 1 month";
+  }
+
+  document.getElementById("experienceCounter").textContent =
+    experienceText.trim();
+}
+
+calculateExperience();
+
+
+
+
+const API_BASE_URL = "https://myself-api.vercel.app/api/v1";
+
+const contactForm = document.getElementById("portfolioContactForm");
+const submitBtn = document.getElementById("submitBtn");
+
+contactForm.addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  // Bootstrap validation
+  if (!contactForm.checkValidity()) {
+    contactForm.classList.add("was-validated");
+    return;
+  }
+
+  const buttonText = submitBtn.querySelector("span");
+  const originalText = buttonText.textContent;
+
+  const formData = {
+    name: document.getElementById("contactName").value.trim(),
+    email: document.getElementById("contactEmail").value.trim(),
+    phone: document.getElementById("contactPhone").value.trim(),
+    subject: document.getElementById("contactSubject").value.trim(),
+    requerment : document.getElementById("projectType").value,
+    message: document.getElementById("contactMessage").value.trim()
+  };
+
+  try {
+    submitBtn.disabled = true;
+    buttonText.textContent = "Sending...";
+
+    const response = await fetch(`${API_BASE_URL}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(formData)
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.message || "Failed to send message");
+    }
+
+    alert("Message sent successfully! 🎉");
+
+    contactForm.reset();
+    contactForm.classList.remove("was-validated");
+
+  } catch (error) {
+    console.error("Contact form error:", error);
+
+    alert(
+      error.message ||
+      "Something went wrong. Please try again later."
+    );
+
+  } finally {
+    submitBtn.disabled = false;
+    buttonText.textContent = originalText;
+  }
 });
