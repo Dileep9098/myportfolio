@@ -611,16 +611,23 @@ function initProjectModal() {
 // ==========================================================================
 
 function initTheme() {
-  const savedTheme = localStorage.getItem('portfolio_theme') || 'dark';
+  const savedTheme = localStorage.getItem('portfolio_theme') || 'light';
   document.documentElement.setAttribute('data-theme', savedTheme);
 
   document.querySelectorAll('.theme-toggle-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-      const current = document.documentElement.getAttribute('data-theme') || 'dark';
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
       const nextTheme = current === 'dark' ? 'light' : 'dark';
+
       document.documentElement.setAttribute('data-theme', nextTheme);
       localStorage.setItem('portfolio_theme', nextTheme);
-      showToast(`Switched to ${nextTheme === 'dark' ? 'Obsidian Dark' : 'Pearl Light'} Mode`, nextTheme === 'dark' ? '<i class="fa-solid fa-moon"></i>' : '<i class="fa-solid fa-sun"></i>');
+
+      showToast(
+        `Switched to ${nextTheme === 'dark' ? 'Obsidian Dark' : 'Pearl Light'} Mode`,
+        nextTheme === 'dark'
+          ? '<i class="fa-solid fa-moon"></i>'
+          : '<i class="fa-solid fa-sun"></i>'
+      );
     });
   });
 }
